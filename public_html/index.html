@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- e4_4.html - Exercise 4.4
+-->
+<html lang = "en">
+    <head>
+        <title> Exercise 4.4 </title>
+        <meta charset = "utf-8" />
+    </head>
+    <body style="font-family:Verdana;">
+        <script type = "text/javascript">
+            var first = 0, second = 1, next, count;
+            var number = prompt("How many Fibonacci numbers do you want? (3-50)", "");
+            if (number >= 3  && number <= 50) {
+                document.write("First " + number + " Fibonacci Numbers <br /><br />");
+                for (count = 1; count <= number; count++) {
+                    if (count <= 1 )
+                        next = count;
+                    else {
+                        next = first + second;
+                        first = second;
+                        second = next; 
+                    }
+                    document.write(count + " - " + next + "<br />");
+                }
+            }
+            else
+                document.write("Error - number not in the range 3-50!");
+        </script>
+    </body>
+</html>
